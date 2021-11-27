@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <style>
+         .bar-cover {
+         width: 80%;
+         background-color: #ebebeb;
+         border-radius: 20px;
+         -webkit-border-radius: 20px;
+         -moz-border-radius: 20px;
+         -ms-border-radius: 20px;
+         -o-border-radius: 20px;
+         margin: 0 auto;
+         }
+         .bar-1{
+         background-color: #99d452;
+         }
+         .bar-2{
+         background-color: #fe8777;
+         }
+         .bar-3{
+         background-color: #fefefe;
+         }
+         .bar-4{
+         background-color: #9ad0f3;
+         }
+         .bar-5{
+         background-color: #ffc64c;
+         }
+         .bar {
+         border-radius: 20px;
+         border: 1px black solid;
+         -webkit-border-radius: 20px;
+         -moz-border-radius: 20px;
+         -ms-border-radius: 20px;
+         -o-border-radius: 20px;
+         text-align: right;
+         margin-top: 15px;
+         font-weight: 200;
+         padding-right:5px;
+         box-sizing: border-box;
+         width:50%;
+         box-shadow: 2px 2px #c3c3c3
+         ;
+         }
+         body{
+         background-color:#fafafa
+         }
+         .finish-button {
+         float:right;
+         margin:5% 10% 0px 0px;
+         background-color: #4CAF50; /* Green */
+         border: none;
+         color: white;
+         padding: 10px 22px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         border-radius: 5px;
+         }
+         .finish-button:hover{
+         cursor:pointer;
+         }
+      </style>
+   </head>
+   <body>
+      <div class="bar-cover">
+         <div class="bar bar-1">50%</div>
+      </div>
+      <div class="bar-cover">
+         <div class="bar bar-2">50%</div>
+      </div>
+      <div class="bar-cover">
+         <div class="bar bar-3">50%</div>
+      </div>
+      <div class="bar-cover">
+         <div class="bar bar-4">50%</div>
+      </div>
+      <div class="bar-cover">
+         <div class="bar bar-5">50%</div>
+      </div>
+      <button id="finish-button" class="finish-button" onclick="finishButtonClickhandler()">
+      Finish
+      </button>
+      <script>
+         function finishButtonClickhandler(){
+           var bars = document.getElementsByClassName("bar")
+           for(var i=0;i<bars.length;i++){
+             bars[i].style.width = "100%"
+           	bars[i].innerText = "100%"
+           }
+           }
+      </script>
+   </body>
